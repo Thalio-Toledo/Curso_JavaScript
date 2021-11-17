@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Documento sem t&iacute;tulo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+</head>
+
+<body>
+
+<div id="Layer1" style="position:absolute; left:14px; top:133px; width:139px; height:25px; z-index:1">Digite 
+  um Numero 
+  <div id="Layer1" style="position:absolute; left:145px; top:0px; width:139px; height:25px; z-index:1">Digite 
+    uma Opera&ccedil;&atilde;o</div>
+</div>
+<form name="calculadora" method="post" action="">
+  <p>&nbsp;</p>
+  <div id="Layer1" style="position:absolute; left:307px; top:133px; width:139px; height:25px; z-index:1">Digite 
+    um Numero</div>
+  <p>&nbsp;</p>
+  <p> 
+    <input type="text" name="n1">
+    <input type="text" name="op">
+    <input type="text" name="n2">
+    <input type="submit" name="Submit" value="=" onClick="return result()">
+  </p>
+</form>
+
+<script>
+
+var resultado = 0;
+
+  function result(){
+  
+    var n1 = calculadora.n1.value;
+	var n2 = calculadora.n2.value;
+	var operação = calculadora.op.value;
+
+switch (operação) {
+	case "+":
+		var resultado = parseInt(n1) + parseInt(n2);
+		alert(resultado);
+		break
+	case "-":
+		var resultado = n1 - n2;
+		alert(resultado);
+		break
+	case "*":
+		var resultado = n1 * n2;
+		alert(resultado);
+		break
+		
+	case "/":
+		var resultado = n1 / n2;
+		alert(resultado);
+		break
+		
+	default:
+		alert("digite novamente um operador")
+}
+  
+  
+  
+  }
+
+</script>
+</body>
+</html>

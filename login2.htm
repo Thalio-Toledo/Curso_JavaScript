@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Documento sem t&iacute;tulo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+<form name="login" method="post" action="">
+  <p>Digite seu nome:</br>
+    <input type="text" name="nome">
+  </p>
+  <p> Digite sua Senha:</br>
+    <input type="text" name="senha">
+  </p>
+  <p>
+    <input type="submit" name="Submit" value="Entrar" onClick="return validar()">
+  </p>
+</form>
+
+<script>
+
+var nome1 = "batman";
+var senha1 = "123";
+  
+  function validar(){
+  
+  var nome = login.nome.value;
+  var senha = login.senha.value;
+  
+  if (nome == nome1 && senha == senha1)
+  {
+     alert("Wellcome to the Jungle");
+  
+  }
+  else if (nome != nome1 && senha == senha1)
+  {
+     alert("Nome errado");
+  
+  }
+else if (nome == nome1 && senha != senha1)
+  {
+     alert("senha errada");
+  
+  }
+  
+  }
+
+
+</script>
+
+</body>
+</html>

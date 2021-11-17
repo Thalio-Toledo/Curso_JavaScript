@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        button{
+            margin-top: 30px;
+            float: left;
+            height: 50px;
+        }
+        img{
+            float:left;
+            margin-left: 10px;
+            margin-right: 10px;
+            
+        }
+    </style>
+
+    <div>
+        <button onclick="prev()" ><</button>
+        <img id="slider" src="c1.jpg" width="1000px" height="100%"/>
+        <button onclick="next()">></button>
+
+
+    </div>
+    <script>
+        const images = [
+            'c1.jpg',
+            'c2.jpg',
+            'c3.jpg',
+            'c4.jpg',
+
+        ]
+        let num = 0 
+        function next(){
+            let slider = document.getElementById('slider');
+            num++
+            if(num>= images.length){
+                num = 0 
+            }
+            slider.src = images[num]
+        }
+
+        function prev(){
+            let slider = document.getElementById('slider');
+            num--
+            if(num <0){
+                num = images.length-1 
+            }
+            slider.src = images[num]
+        }
+    </script>
+    
+</body>
+</html>

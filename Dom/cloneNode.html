@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="demo">
+        <p>text 1</p>
+
+    </div>
+
+    <script>
+        let div = document.getElementById('demo')
+        // let filho = div.children[0] // pega o filho 0
+        let filho = div.childNodes[1]
+        let filho2 = filho.cloneNode() //clona o elemento Filho
+        let textNew = document.createTextNode('Text 2')
+        let text3 = document.createTextNode('Text 3')
+        filho2.appendChild(textNew)
+        div.appendChild(filho2)
+        let p = document.createElement('p')
+        div.appendChild(p)
+        div.removeChild(p)
+
+        
+    </script>
+    
+</body>
+</html>

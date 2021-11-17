@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>relogio</title>
+    <style>
+        body{
+    margin:0;
+    padding:0;
+    background: #34495e;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+
+}
+        #relogio{
+        
+    width:300px;
+    padding:40px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    background:#191919;
+    color:whitesmoke;
+    text-align: center;
+}
+    </style>
+</head>
+<body onload="mostrarRelogio();">
+    <div id="relogio" ></div>
+
+    <script>
+
+       
+       function mostrarRelogio(){
+       var data = new Date;
+       var horas = data.getHours();
+       var minutos = data.getMinutes();
+       var segundos = data.getSeconds();
+       
+       
+       document.getElementById('relogio').innerHTML = `${zero(horas)}:${zero(minutos)}:${zero(segundos)}`
+       }
+
+       function zero(valor){
+           if(valor < 10 ){
+               valor = "0" + valor
+               
+           }
+           return valor
+        }
+
+       
+    
+       setInterval(mostrarRelogio,1000);
+    
+  
+       
+    </script>
+    
+</body>
+</html>
